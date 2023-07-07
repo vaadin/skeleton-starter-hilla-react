@@ -8,4 +8,4 @@ export const routes: readonly RouteObject[] = [
   { path: "/", element: <MainView /> },
 ];
 
-export const router = createBrowserRouter([...routes]);
+export const router = createBrowserRouter([...routes], {basename: new URL(document.baseURI).pathname });
