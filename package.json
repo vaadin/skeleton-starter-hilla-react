@@ -13,10 +13,10 @@
     "@hilla/generator-typescript-plugin-model": "2.2.0-beta1",
     "@hilla/generator-typescript-plugin-push": "2.2.0-beta1",
     "@hilla/generator-typescript-utils": "2.2.0-beta1",
-    "@hilla/react-components": "2.2.0-alpha11",
+    "@hilla/react-components": "2.1.6",
     "@hilla/react-form": "2.2.0-beta1",
     "@polymer/polymer": "3.5.1",
-    "@vaadin/bundles": "24.2.0-alpha11",
+    "@vaadin/bundles": "24.1.6",
     "@vaadin/common-frontend": "0.0.18",
     "@vaadin/router": "1.7.5",
     "classnames": "^2.3.2",
@@ -83,10 +83,10 @@
       "@hilla/generator-typescript-plugin-model": "2.2.0-beta1",
       "@hilla/generator-typescript-plugin-push": "2.2.0-beta1",
       "@hilla/generator-typescript-utils": "2.2.0-beta1",
-      "@hilla/react-components": "2.2.0-alpha11",
+      "@hilla/react-components": "2.1.6",
       "@hilla/react-form": "2.2.0-beta1",
       "@polymer/polymer": "3.5.1",
-      "@vaadin/bundles": "24.2.0-alpha11",
+      "@vaadin/bundles": "24.1.6",
       "@vaadin/common-frontend": "0.0.18",
       "@vaadin/router": "1.7.5",
       "construct-style-sheets-polyfill": "3.1.0",
@@ -110,6 +110,6 @@
       "workbox-core": "7.0.0",
       "workbox-precaching": "7.0.0"
     },
-    "hash": "3270e720352d8d9201d1ee8eb72d1407309db1e28f4e5445f0e9be93bb206c96"
+    "hash": "b3057eb9366119732e6ff459c880f33b7e6cf9cf920c6cc4f3be6639f68b696a"
   }
 }
