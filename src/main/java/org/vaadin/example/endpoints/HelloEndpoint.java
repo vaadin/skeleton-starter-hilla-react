@@ -14,8 +14,9 @@ public class HelloEndpoint {
      * Both the parameter and the return value are
      * automatically considered to be Nonnull, due to
      * existence of <code>package-info.java</code>
-     * in the same package that contains a
-     * <code>@org.springframework.lang.NonNullApi</code>.
+     * in the same package that defines a
+     * <code>@org.springframework.lang.NonNullApi</code>
+     * for the current package.
      * <p>
      * Note that you can override the default Nonnull
      * behavior by annotating the parameter with
