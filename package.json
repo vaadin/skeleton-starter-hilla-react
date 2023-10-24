@@ -31,7 +31,7 @@
   },
   "devDependencies": {
     "@lit-labs/react": "^1.1.0",
-    "@rollup/plugin-replace": "5.0.2",
+    "@rollup/plugin-replace": "5.0.4",
     "@rollup/pluginutils": "5.0.2",
     "@types/react": "^18.0.25",
     "@types/react-dom": "^18.0.8",
@@ -101,7 +101,7 @@
       "lit": "2.8.0"
     },
     "devDependencies": {
-      "@rollup/plugin-replace": "5.0.2",
+      "@rollup/plugin-replace": "5.0.4",
       "@rollup/pluginutils": "5.0.2",
       "@vitejs/plugin-react": "4.0.4",
       "async": "3.2.4",
