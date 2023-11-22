@@ -34,7 +34,7 @@
     "@rollup/plugin-replace": "5.0.2",
     "@rollup/pluginutils": "5.0.2",
     "@types/react": "^18.0.25",
-    "@types/react-dom": "^18.0.8",
+    "@types/react-dom": "^18.2.17",
     "@vitejs/plugin-react": "4.0.4",
     "async": "3.2.4",
     "glob": "10.3.3",
