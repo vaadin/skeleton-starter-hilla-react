@@ -4,7 +4,7 @@
   "type": "module",
   "dependencies": {
     "@hilla/form": "2.5.0",
-    "@hilla/frontend": "2.5.0",
+    "@hilla/frontend": "24.1.15",
     "@hilla/generator-typescript-cli": "2.5.0",
     "@hilla/generator-typescript-core": "2.5.0",
     "@hilla/generator-typescript-plugin-backbone": "2.5.0",
@@ -80,7 +80,7 @@
   "vaadin": {
     "dependencies": {
       "@hilla/form": "2.5.0",
-      "@hilla/frontend": "2.5.0",
+      "@hilla/frontend": "24.1.15",
       "@hilla/generator-typescript-cli": "2.5.0",
       "@hilla/generator-typescript-core": "2.5.0",
       "@hilla/generator-typescript-plugin-backbone": "2.5.0",
