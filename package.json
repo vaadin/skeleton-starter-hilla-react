@@ -4,6 +4,7 @@
   "type": "module",
   "dependencies": {
     "@polymer/polymer": "3.5.1",
+    "@preact/signals-react": "^2.0.0",
     "@vaadin/a11y-base": "24.4.0-alpha13",
     "@vaadin/accordion": "24.4.0-alpha13",
     "@vaadin/app-layout": "24.4.0-alpha13",
@@ -233,7 +234,7 @@
       "workbox-core": "7.0.0",
       "workbox-precaching": "7.0.0"
     },
-    "hash": "849782b3203400b6fb515ccbc5df4179408ac05b147b5902093c4799758c246e"
+    "hash": "6d1862ce55e7694647a8a4c1ff636eff7d9c087211ec93197d85d2a15927e47c"
   },
   "overrides": {
     "@vaadin/bundles": "$@vaadin/bundles",
@@ -330,6 +331,7 @@
     "@vaadin/hilla-react-auth": "$@vaadin/hilla-react-auth",
     "@vaadin/hilla-generator-cli": "$@vaadin/hilla-generator-cli",
     "@vaadin/hilla-generator-plugin-backbone": "$@vaadin/hilla-generator-plugin-backbone",
-    "@vaadin/hilla-frontend": "$@vaadin/hilla-frontend"
+    "@vaadin/hilla-frontend": "$@vaadin/hilla-frontend",
+    "@preact/signals-react": "$@preact/signals-react"
   }
 }
