@@ -2,7 +2,7 @@ import { Button } from "@vaadin/react-components/Button.js";
 import { Notification } from "@vaadin/react-components/Notification.js";
 import { TextField } from "@vaadin/react-components/TextField.js";
 import { HelloEndpoint } from "Frontend/generated/endpoints.js";
-import { useSignal } from "@preact/signals-react"; // change to "@vaadin/hilla-react-signals"; when available
+import { useSignal } from "@vaadin/hilla-react-signals";
 
 export default function MainView() {
   const name = useSignal("");
