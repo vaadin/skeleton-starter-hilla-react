@@ -58,4 +58,8 @@ declare module '*.avif' {
 declare module '*.webp' {
     const ref: string;
     export default ref;
+}declare module '*.css?inline' {
+  import type { CSSResultGroup } from 'lit';
+  const content: CSSResultGroup;
+  export default content;
 }
