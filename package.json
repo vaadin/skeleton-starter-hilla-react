@@ -33,7 +33,7 @@
     "@lit-labs/react": "^1.1.0",
     "@rollup/plugin-replace": "5.0.5",
     "@rollup/pluginutils": "5.1.0",
-    "@types/react": "^18.0.25",
+    "@types/react": "^18.2.77",
     "@types/react-dom": "^18.0.8",
     "@vitejs/plugin-react": "4.2.1",
     "@vitejs/plugin-react-swc": "3.5.0",
