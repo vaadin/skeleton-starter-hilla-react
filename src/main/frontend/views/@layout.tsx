@@ -27,7 +27,7 @@ export default function MainLayout() {
     <AppLayout primarySection="drawer">
       <div slot="drawer" className="flex flex-col justify-between h-full p-m">
         <header className="flex flex-col gap-m">
-          <h1 className="text-l m-0">${currentTitle}</h1>
+          <h1 className="text-l m-0">{currentTitle}</h1>
           <SideNav
             onNavigate={({ path }) => navigate(path!)}
             location={location}
