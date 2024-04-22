@@ -1,18 +1,23 @@
-import { AppLayout } from '@vaadin/react-components/AppLayout.js';
-import { DrawerToggle } from '@vaadin/react-components/DrawerToggle.js';
-import {createMenuItems, useViewConfig} from '@vaadin/hilla-file-router/runtime.js';
-import { ProgressBar } from '@vaadin/react-components/ProgressBar';
-import { Suspense, useEffect } from 'react';
-import { NavLink, Outlet } from 'react-router-dom';
-
-const navLinkClasses = ({ isActive }: any) => {
-  return `block rounded-m p-s ${isActive ? 'bg-primary-10 text-primary' : 'text-body'}`;
-};
+import {
+  AppLayout,
+  DrawerToggle,
+  ProgressBar,
+  SideNav,
+  SideNavItem,
+} from "@vaadin/react-components";
+import {
+  createMenuItems,
+  useViewConfig,
+} from "@vaadin/hilla-file-router/runtime.js";
+import { Suspense, useEffect } from "react";
+import { Outlet, useLocation, useNavigate } from "react-router-dom";
 
 const defaultTitle = document.title;
 
 export default function MainLayout() {
   const currentTitle = useViewConfig()?.title ?? defaultTitle;
+  const navigate = useNavigate();
+  const location = useLocation();
 
   useEffect(() => {
     document.title = currentTitle;
@@ -23,13 +28,16 @@ export default function MainLayout() {
       <div slot="drawer" className="flex flex-col justify-between h-full p-m">
         <header className="flex flex-col gap-m">
           <h1 className="text-l m-0">{currentTitle}</h1>
-          <nav>
+          <SideNav
+            onNavigate={({ path }) => navigate(path!)}
+            location={location}
+          >
             {createMenuItems().map(({ to, icon, title }) => (
-              <NavLink className={navLinkClasses} to={to} key={to}>
+              <SideNavItem path={to} key={to}>
                 {title}
-              </NavLink>
+              </SideNavItem>
             ))}
-          </nav>
+          </SideNav>
         </header>
       </div>
 
