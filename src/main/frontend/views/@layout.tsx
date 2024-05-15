@@ -35,7 +35,7 @@ export default function MainLayout() {
                 onNavigate={({path}) => navigate(path!)}
                 location={location}
             >
-              {createMenuItems().map(({to, icon, title}) => (
+              {createMenuItems().map(({to, title}) => (
                   <SideNavItem path={to} key={to}>
                     {title}
                   </SideNavItem>
