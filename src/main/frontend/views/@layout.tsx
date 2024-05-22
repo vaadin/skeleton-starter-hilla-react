@@ -9,7 +9,7 @@ import {
   createMenuItems,
   useViewConfig,
 } from "@vaadin/hilla-file-router/runtime.js";
-import { Suspense } from "react";
+import {Suspense, useEffect} from "react";
 import { Outlet, useLocation, useNavigate } from "react-router-dom";
 import { Signal, signal, effect } from '@vaadin/hilla-react-signals';
 
@@ -24,7 +24,9 @@ export default function MainLayout() {
   const navigate = useNavigate();
   const location = useLocation();
 
-  vaadin.documentTitleSignal.value = currentTitle;
+  useEffect(() => {
+    vaadin.documentTitleSignal.value = currentTitle;
+  })
 
   return (
       <AppLayout primarySection="drawer">
