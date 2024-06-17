@@ -17,7 +17,9 @@ const vaadin = window.Vaadin as {
   documentTitleSignal: Signal<string>;
 };
 vaadin.documentTitleSignal = signal("");
-effect(() =>  document.title = vaadin.documentTitleSignal.value);
+effect(() =>  {
+  document.title = vaadin.documentTitleSignal.value;
+});
 
 export default function MainLayout() {
   const currentTitle = useViewConfig()?.title ?? '';
