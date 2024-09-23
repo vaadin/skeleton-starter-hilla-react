@@ -1,6 +1,6 @@
 import { Button, Notification, TextField } from '@vaadin/react-components';
 import { HelloEndpoint } from 'Frontend/generated/endpoints.js';
-import { useState } from 'react';
+import { useSignal } from '@vaadin/hilla-react-signals';
 import type { ViewConfig } from '@vaadin/hilla-file-router/types.js';
 
 export const config: ViewConfig = {
@@ -10,19 +10,19 @@ export const config: ViewConfig = {
 };
 
 export default function MainView() {
-  const [name, setName] = useState('');
+  const name = useSignal('');
 
   return (
     <>
       <TextField
         label="Your name"
         onValueChanged={(e) => {
-          setName(e.detail.value);
+          name.value = e.detail.value;
         }}
       />
       <Button
         onClick={async () => {
-          const serverResponse = await HelloEndpoint.sayHello(name);
+          const serverResponse = await HelloEndpoint.sayHello(name.value);
           Notification.show(serverResponse);
         }}>
         Say hello
