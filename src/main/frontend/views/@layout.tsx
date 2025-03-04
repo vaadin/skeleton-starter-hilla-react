@@ -1,50 +1,81 @@
-import { AppLayout, DrawerToggle, ProgressBar, SideNav, SideNavItem } from '@vaadin/react-components';
-import { createMenuItems, useViewConfig } from '@vaadin/hilla-file-router/runtime.js';
-import { Suspense, useEffect } from 'react';
-import { Outlet, useLocation, useNavigate } from 'react-router-dom';
-import { Signal, signal, effect } from '@vaadin/hilla-react-signals';
+import { Outlet, useLocation, useNavigate } from 'react-router';
+import {
+  AppLayout,
+  Avatar,
+  Icon,
+  MenuBar,
+  MenuBarItemSelectedEvent,
+  ProgressBar,
+  Scroller,
+  SideNav,
+  SideNavItem,
+} from '@vaadin/react-components';
+import { Suspense } from 'react';
+import { createMenuItems } from '@vaadin/hilla-file-router/runtime.js';
 
-const vaadin = window.Vaadin as {
-  documentTitleSignal: Signal<string>;
-};
-vaadin.documentTitleSignal = signal('');
-effect(() => {
-  document.title = vaadin.documentTitleSignal.value;
-});
+function Header() {
+  // TODO Replace with real application logo and name
+  return (
+    <div className="flex p-m gap-m items-center" slot="drawer">
+      <Icon icon="vaadin:cubes" className="text-primary icon-l" />
+      <span className="font-semibold text-l">Walking Skeleton</span>
+    </div>
+  );
+}
 
-export default function MainLayout() {
-  const currentTitle = useViewConfig()?.title ?? '';
+function MainMenu() {
   const navigate = useNavigate();
   const location = useLocation();
 
-  useEffect(() => {
-    vaadin.documentTitleSignal.value = currentTitle;
-  });
+  return (
+    <SideNav className="mx-m" onNavigate={({ path }) => path != null && navigate(path)} location={location}>
+      {createMenuItems().map(({ to, icon, title }) => (
+        <SideNavItem path={to} key={to}>
+          {icon && <Icon icon={icon} slot="prefix" />}
+          {title}
+        </SideNavItem>
+      ))}
+    </SideNav>
+  );
+}
 
+function UserMenu() {
+  // TODO Replace with real user information and actions
+  const items = [
+    {
+      component: (
+        <>
+          <Avatar theme="xsmall" name="John Smith" colorIndex={5} className="mr-s" /> John Smith
+        </>
+      ),
+      children: [
+        { text: 'View Profile', action: () => console.log('View Profile') },
+        { text: 'Manage Settings', action: () => console.log('Manage Settings') },
+        { text: 'Logout', action: () => console.log('Logout') },
+      ],
+    },
+  ];
+  const onItemSelected = (event: MenuBarItemSelectedEvent) => {
+    const action = (event.detail.value as any).action;
+    if (action) {
+      action();
+    }
+  };
+  return (
+    <MenuBar theme="tertiary-inline" items={items} onItemSelected={onItemSelected} className="m-m" slot="drawer" />
+  );
+}
+
+export default function MainLayout() {
   return (
     <AppLayout primarySection="drawer">
-      <div slot="drawer" className="flex flex-col justify-between h-full p-m">
-        <header className="flex flex-col gap-m">
-          <h1 className="text-l m-0">{vaadin.documentTitleSignal}</h1>
-          <SideNav onNavigate={({ path }) => navigate(path!)} location={location}>
-            {createMenuItems().map(({ to, title }) => (
-              <SideNavItem path={to} key={to}>
-                {title}
-              </SideNavItem>
-            ))}
-          </SideNav>
-        </header>
-      </div>
-
-      <DrawerToggle slot="navbar" aria-label="Menu toggle"></DrawerToggle>
-      <h2 slot="navbar" className="text-l m-0">
-        {vaadin.documentTitleSignal}
-      </h2>
-
-      <Suspense fallback={<ProgressBar indeterminate className="m-0" />}>
-        <section className="view">
-          <Outlet />
-        </section>
+      <Header />
+      <Scroller slot="drawer">
+        <MainMenu />
+      </Scroller>
+      <UserMenu />
+      <Suspense fallback={<ProgressBar indeterminate={true} className="m-0" />}>
+        <Outlet />
       </Suspense>
     </AppLayout>
   );
