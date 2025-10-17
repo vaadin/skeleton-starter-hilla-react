@@ -1,0 +1,12 @@
+@import "aura/aura.css";
+
+vaadin-app-layout::part(navbar) {
+    justify-content: flex-start;
+}
+.view {
+    padding: 1rem;
+}
+
+.view vaadin-horizontal-layout {
+    align-items: flex-end;
+}
