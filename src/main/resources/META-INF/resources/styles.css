@@ -8,5 +8,5 @@ vaadin-app-layout::part(navbar) {
 }
 
 .view vaadin-horizontal-layout {
-    align-items: flex-end;
+    align-items: baseline;
 }
