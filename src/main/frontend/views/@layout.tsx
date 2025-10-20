@@ -42,7 +42,7 @@ export default function MainLayout() {
       </h2>
 
       <Suspense fallback={<ProgressBar indeterminate className="m-0" />}>
-        <section className="view p-m gap-m">
+        <section className="view">
           <Outlet />
         </section>
       </Suspense>
