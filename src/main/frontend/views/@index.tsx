@@ -1,4 +1,4 @@
-import { Button, Notification, TextField } from '@vaadin/react-components';
+import { Button, Notification, TextField, HorizontalLayout } from '@vaadin/react-components';
 import { HelloEndpoint } from 'Frontend/generated/endpoints.js';
 import { useSignal } from '@vaadin/hilla-react-signals';
 import type { ViewConfig } from '@vaadin/hilla-file-router/types.js';
@@ -13,7 +13,7 @@ export default function MainView() {
   const name = useSignal('');
 
   return (
-    <>
+    <HorizontalLayout theme="spacing padding">
       <TextField
         label="Your name"
         onValueChanged={(e) => {
@@ -27,6 +27,6 @@ export default function MainView() {
         }}>
         Say hello
       </Button>
-    </>
+    </HorizontalLayout>
   );
 }

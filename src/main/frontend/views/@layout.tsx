@@ -23,9 +23,9 @@ export default function MainLayout() {
 
   return (
     <AppLayout primarySection="drawer">
-      <div slot="drawer" className="flex flex-col justify-between h-full p-m">
-        <header className="flex flex-col gap-m">
-          <h1 className="text-l m-0">{vaadin.documentTitleSignal}</h1>
+      <div slot="drawer">
+        <header>
+          <h1>{vaadin.documentTitleSignal}</h1>
           <SideNav onNavigate={({ path }) => navigate(path!)} location={location}>
             {createMenuItems().map(({ to, title }) => (
               <SideNavItem path={to} key={to}>
@@ -37,7 +37,7 @@ export default function MainLayout() {
       </div>
 
       <DrawerToggle slot="navbar" aria-label="Menu toggle"></DrawerToggle>
-      <h2 slot="navbar" className="text-l m-0">
+      <h2 slot="navbar">
         {vaadin.documentTitleSignal}
       </h2>
 
