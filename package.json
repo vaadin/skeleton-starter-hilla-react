@@ -25,7 +25,7 @@
     "proj4": "2.17.0",
     "react": "19.2.7",
     "react-dom": "19.2.7",
-    "react-router": "7.17.0"
+    "react-router": "7.18.0"
   },
   "devDependencies": {
     "@babel/core": "7.29.7",
@@ -36,7 +36,7 @@
     "@rolldown/plugin-babel": "0.2.3",
     "@rollup/plugin-replace": "6.0.3",
     "@rollup/pluginutils": "5.4.0",
-    "@types/node": "25.9.3",
+    "@types/node": "25.9.4",
     "@types/react": "19.2.17",
     "@types/react-dom": "19.2.3",
     "@vaadin/hilla-generator-cli": "25.2.0",
@@ -50,7 +50,7 @@
     "@vaadin/hilla-generator-plugin-subtypes": "25.2.0",
     "@vaadin/hilla-generator-plugin-transfertypes": "25.2.0",
     "@vaadin/hilla-generator-utils": "25.2.0",
-    "@vitejs/plugin-react": "6.0.2",
+    "@vitejs/plugin-react": "6.0.3",
     "magic-string": "0.30.21",
     "rollup-plugin-brotli": "3.1.0",
     "rollup-plugin-visualizer": "7.0.1",
@@ -58,7 +58,7 @@
     "transform-ast": "2.4.4",
     "typescript": "6.0.3",
     "vite": "8.0.16",
-    "vite-plugin-checker": "0.14.1"
+    "vite-plugin-checker": "0.14.4"
   },
   "vaadin": {
     "dependencies": {
@@ -84,7 +84,7 @@
       "proj4": "2.17.0",
       "react": "19.2.7",
       "react-dom": "19.2.7",
-      "react-router": "7.17.0"
+      "react-router": "7.18.0"
     },
     "devDependencies": {
       "@babel/core": "7.29.7",
@@ -95,7 +95,7 @@
       "@rolldown/plugin-babel": "0.2.3",
       "@rollup/plugin-replace": "6.0.3",
       "@rollup/pluginutils": "5.4.0",
-      "@types/node": "25.9.3",
+      "@types/node": "25.9.4",
       "@types/react": "19.2.17",
       "@types/react-dom": "19.2.3",
       "@vaadin/hilla-generator-cli": "25.2.0",
@@ -109,7 +109,7 @@
       "@vaadin/hilla-generator-plugin-subtypes": "25.2.0",
       "@vaadin/hilla-generator-plugin-transfertypes": "25.2.0",
       "@vaadin/hilla-generator-utils": "25.2.0",
-      "@vitejs/plugin-react": "6.0.2",
+      "@vitejs/plugin-react": "6.0.3",
       "magic-string": "0.30.21",
       "rollup-plugin-brotli": "3.1.0",
       "rollup-plugin-visualizer": "7.0.1",
@@ -117,9 +117,9 @@
       "transform-ast": "2.4.4",
       "typescript": "6.0.3",
       "vite": "8.0.16",
-      "vite-plugin-checker": "0.14.1"
+      "vite-plugin-checker": "0.14.4"
     },
-    "hash": "099f1899e43498b1557e335d6db68a9e992a43ce2865548c29cddde55ec25b82",
+    "hash": "01b2e1724d5d3316efb6cd3ea7f2b876459cc0c926642cd3b78eee084531dfbb",
     "overrides": {
       "@vaadin/a11y-base": "25.2.0",
       "@vaadin/accordion": "25.2.0",
